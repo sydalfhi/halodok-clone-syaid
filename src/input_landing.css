@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ! navigasi bar */
+@layer components {
+  nav {
+    @apply justify-between items-center flex-col relative z-50 px-5  flex pt-[15px] lg:px-[100px] lg:mt-[18px] xl:px-[150px];
+  }
+  nav h1 {
+    @apply flex space-x-[15px] font-bold text-lg self-start;
+  }
+  nav #menu_toggle {
+    @apply relative z-50 block md:hidden  h-7 w-7 -translate-x-1 self-end -translate-y-7;
+  }
+  nav .menu {
+    @apply flex flex-col justify-start  bg-white  shadow-2xl absolute top-12 left-0 right-0 mx-5 p-10 z-50 space-y-5 rounded-xl md:bg-transparent md:relative md:space-y-0 md:mx-0 md:shadow-transparent md:flex-row md:p-0 md:-top-8 md:self-end md:space-x-9 xl:space-x-36;
+  }
+  nav ul {
+    @apply justify-center  items-start md:space-x-[50px]  flex flex-col  md:flex-row md:items-center space-y-5 md:space-y-0;
+  }
+  nav ul li a {
+    @apply text-black/60 font-normal text-[20px] md:text-[16px];
+  }
+  nav ul li a.active {
+    @apply font-semibold text-black/100;
+  }
+  nav .item_next {
+    @apply flex space-x-5   justify-between items-center;
+  }
+  nav .item_next .login {
+    @apply w-[81px] h-[37px] font-bold text-base;
+  }
+  nav .item_next .booking {
+    @apply w-[117px] h-[37px] border border-[#101c45] font-bold text-base;
+  }
+}
+
+/* ! section 1 */
+@layer components {
+  #first_section .rectangle_contain {
+    @apply absolute w-[100%] -top-12 left-1/2 -translate-x-1/2 md:translate-x-0 md:-top-12  md:w-[50%] lg:-top-24;
+  }
+
+  #first_section .contain {
+    @apply md:flex md:mx-[50px] lg:mx-[60px];
+  }
+
+  /* right */
+  #first_section .contain .right_item {
+    @apply md:order-2;
+  }
+  #first_section .right_item .hero {
+    @apply lg:scale-[0.8]  lg:-translate-y-3 xl:scale-100  xl:translate-x-40 xl:translate-y-3;
+  }
+  #first_section .right_item .card {
+    @apply bg-white rounded-[10px] w-[292px] p-5 shadow-lg -translate-y-36  z-20 relative mx-auto lg:-translate-y-60 xl:-translate-y-[600px] xl:-translate-x-32 xl:shadow-xl;
+  }
+  #first_section .right_item .card .card_head {
+    @apply flex justify-between items-center mb-3;
+  }
+  #first_section .right_item .card_body p {
+    @apply font-normal leading-5 text-xs  justify-start lg:text-[12px];
+  }
+
+  /* left */
+  #first_section .left_item {
+    @apply px-6 -translate-y-16  flex flex-col space-y-6 md:translate-y-28;
+  }
+  #first_section .left_item h1 {
+    @apply text-[30px] text-[#101C45] font-medium leading-[40.5px] lg:text-[48px] lg:leading-[62.5px] lg:w-[457px] xl:text-[48px];
+  }
+  #first_section .left_item p {
+    @apply lg:w-[457px] lg:leading-6 text-lg text-[#101C45] font-normal;
+  }
+
+  #first_section .left_item button {
+    @apply bg-[#203271]   px-[35px] py-[15px] font-normal text-white translate-y-3 hover:bg-[#9BEAE0] hover:text-black md:w-[225px];
+  }
+}
+
+@layer components {
+  #second_section {
+    @apply w-full h-[50px] bg-white md:-translate-y-48 relative z-40;
+  }
+}
+
+@layer components {
+  footer {
+    @apply flex items-center  flex-col md:flex-row justify-center space-y-5 md:space-x-5;
+  }
+
+  footer .item {
+    @apply flex  space-x-[25px] items-start;
+  }
+  footer .item h1 {
+    @apply text-white font-bold leading-[23px];
+  }
+  footer .item p {
+    @apply text-white font-normal leading-[26px];
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: #9beae0;
+  width: 0.5em;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #203271;
+  border-radius: 50px;
+}
+@layer utilities {
+  .font-dm {
+    font-family: "DM Sans", sans-serif;
+  }
+  .font-ss {
+    font-family: "Source Sans Pro", sans-serif;
+  }
+}
